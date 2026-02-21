@@ -1,6 +1,9 @@
 name: Transifex Sync
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -9,9 +12,25 @@ jobs:
       - name: Pull translations
         env:
           TX_TOKEN: ${{ secrets.TX_TOKEN }}
-        run: pip install transifex-client && tx pull -a --minimum-perc=1 || true
+        run: |
+          for lang in sv da de es fi fr it ja ko nb_NO nl pl pt_BR ru zh_CN; do
+            echo "Pulling $lang..."
+            resp=$(curl -s -H "Authorization: Bearer $TX_TOKEN" \
+              -H "Content-Type: application/vnd.api+json" \
+              "https://rest.api.transifex.com/resource_translations?filter[resource]=o:danielnylander:p:minnet:r:minnet-pot&filter[language]=l:$lang")
+            # Simple extraction
+            echo "$resp" | python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+entries = data.get('data', [])
+if not entries: sys.exit(0)
+print(f'Got {len(entries)} entries for $lang')
+" || true
+          done
       - name: Commit
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add po/ && git diff --cached --quiet || git commit -m "Update translations" && git push
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@github.com'
+          git add -A po/
+          git diff --staged --quiet || git commit -m 'chore: sync translations from Transifex'
+          git push || true
