@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Memory Training
+GenericName=Train your working memory with card matching
+Comment=Train your working memory with card matching
+Exec=minnet
+Icon=minnet
+Terminal=false
+Categories=Education;Accessibility;
+Keywords=autism;adhd;accessibility;children;
