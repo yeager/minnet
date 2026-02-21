@@ -1,8 +1,9 @@
-name: Build .deb
+name: Build DEB
 on:
-  push:
-    tags: ['v*']
+  release:
+    types: [published]
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,44 +11,54 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install deps
         run: sudo apt-get update && sudo apt-get install -y dpkg-dev gettext
-      - name: Build .deb
+      - name: Get version
+        id: ver
         run: |
-          PKG=minnet
-          VER=$(python3 -c "import re; print(re.search(r'__version__\s*=\s*\"([^\"]+)\"', open('minnet/__init__.py').read()).group(1))")
-          DIR="${PKG}_${VER}_all"
+          VER="${{ github.event.release.tag_name }}"
+          VER="${VER#v}"
+          if [ -z "$VER" ]; then
+            VER=$(python3 -c "from src.minnet import __version__; print(__version__)")
+          fi
+          echo "version=$VER" >> $GITHUB_OUTPUT
+      - name: Build
+        run: |
+          PKG="minnet"
+          VER="${{ steps.ver.outputs.version }}"
+          DIR="build/${PKG}_${VER}_all"
           mkdir -p "$DIR/DEBIAN"
-          mkdir -p "$DIR/usr/lib/python3/dist-packages/$PKG"
-          mkdir -p "$DIR/usr/bin"
+          mkdir -p "$DIR/usr/lib/python3/dist-packages/minnet"
+          mkdir -p "$DIR/usr/local/bin"
           mkdir -p "$DIR/usr/share/applications"
-          mkdir -p "$DIR/usr/share/icons/hicolor/scalable/apps"
-          cp $PKG/*.py "$DIR/usr/lib/python3/dist-packages/$PKG/"
+          cp src/minnet/*.py "$DIR/usr/lib/python3/dist-packages/minnet/"
+          # Compile translations
           for po in po/*.po; do
             [ -f "$po" ] || continue
             lang=$(basename "$po" .po)
             mkdir -p "$DIR/usr/share/locale/$lang/LC_MESSAGES"
-            msgfmt "$po" -o "$DIR/usr/share/locale/$lang/LC_MESSAGES/$PKG.mo"
+            msgfmt "$po" -o "$DIR/usr/share/locale/$lang/LC_MESSAGES/minnet.mo"
           done
-          cp data/se.danielnylander.$PKG.desktop "$DIR/usr/share/applications/"
-          cp data/icons/se.danielnylander.$PKG.svg "$DIR/usr/share/icons/hicolor/scalable/apps/" 2>/dev/null || true
-          printf '#!/usr/bin/env python3\nfrom %s.main import main\nmain()\n' "$PKG" > "$DIR/usr/bin/$PKG"
-          chmod 755 "$DIR/usr/bin/$PKG"
-          cat > "$DIR/DEBIAN/control" << EOF
-          Package: $PKG
-          Version: $VER
-          Section: utils
-          Priority: optional
-          Architecture: all
-          Depends: python3, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1
-          Maintainer: Daniel Nylander <daniel@danielnylander.se>
-          Description: Working memory training games for autism and ADHD
-          Homepage: https://www.autismappar.se
-          EOF
-          sed -i 's/^          //' "$DIR/DEBIAN/control"
+          # Launcher
+          cat > "$DIR/usr/local/bin/minnet" << 'LAUNCHER'
+#!/usr/bin/env python3
+from minnet.main import main
+main()
+LAUNCHER
+          chmod 755 "$DIR/usr/local/bin/minnet"
+          # Desktop file
+          [ -f "data/minnet.desktop" ] && cp "data/minnet.desktop" "$DIR/usr/share/applications/"
+          cat > "$DIR/DEBIAN/control" << CTRL
+Package: minnet
+Version: $VER
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1
+Maintainer: Daniel Nylander <daniel@danielnylander.se>
+Description: minnet
+CTRL
           dpkg-deb --build "$DIR"
-      - name: Upload to release
-        if: startsWith(github.ref, 'refs/tags/')
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          VER=$(python3 -c "import re; print(re.search(r'__version__\s*=\s*\"([^\"]+)\"', open('minnet/__init__.py').read()).group(1))")
-          gh release upload "${GITHUB_REF_NAME}" minnet_${VER}_all.deb --clobber || true
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        if: github.event_name == 'release'
+        with:
+          files: build/*.deb
