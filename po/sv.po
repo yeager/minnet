@@ -1,9 +1,18 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Daniel Nylander <po@danielnylander.se>, 2026
 # 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: minnet 0.1.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-21 20:53+0100\n"
+"PO-Revision-Date: 2026-02-21 15:33+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305146/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -12,66 +21,72 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/minnet/main.py:1
-msgid "About Memory Training"
-msgstr "Om Minnet"
-
-#: src/minnet/main.py:2
-msgid "Congratulations!"
-msgstr "Grattis!"
-
-#: src/minnet/main.py:3
-msgid "Date"
-msgstr "Datum"
-
-#: src/minnet/main.py:4
-msgid "Details"
-msgstr "Detaljer"
-
-#: src/minnet/main.py:5
-msgid "Easy"
-msgstr "Lätt"
-
-#: src/minnet/main.py:6
-msgid "Export Results"
-msgstr "Exportera resultat"
-
-#: src/minnet/main.py:7
-msgid "Hard"
-msgstr "Svårt"
-
-#: src/minnet/main.py:8
-msgid "Medium"
-msgstr "Medel"
-
-#: src/minnet/main.py:9
+#: src/export.py:11 src/main.py:62 src/main.py:75
 msgid "Memory Training"
 msgstr "Minnet"
 
-#: src/minnet/main.py:10
-msgid "Moves: %d | Time: %ds"
-msgstr "Drag: %d | Tid: %ds"
+#: src/export.py:23
+msgid "Date"
+msgstr "Datum"
 
-#: src/minnet/main.py:11
-msgid "Moves: 0 | Time: 0s"
-msgstr "Drag: 0 | Tid: 0s"
+#: src/export.py:23
+msgid "Details"
+msgstr "Detaljer"
 
-#: src/minnet/main.py:12
-msgid "New Game"
-msgstr "Nytt spel"
-
-#: src/minnet/main.py:13
-msgid "Quit"
-msgstr "Avsluta"
-
-#: src/minnet/main.py:14
+#: src/export.py:23
 msgid "Result"
 msgstr "Resultat"
 
-#: src/minnet/main.py:15
+#: src/export.py:45
+msgid "Export"
+msgstr ""
+
+#: src/main.py:93
+msgid "Export Results"
+msgstr "Exportera resultat"
+
+#: src/main.py:94
+msgid "About Memory Training"
+msgstr "Om Minnet"
+
+#: src/main.py:95
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/main.py:99
 msgid "Toggle dark/light theme"
 msgstr "Växla mörkt/ljust tema"
 
-#: src/minnet/main.py:16
+#: src/main.py:105
+msgid "Easy"
+msgstr "Lätt"
+
+#: src/main.py:105
+msgid "Medium"
+msgstr "Medel"
+
+#: src/main.py:105
+msgid "Hard"
+msgstr "Svårt"
+
+#: src/main.py:112
+msgid "Moves: 0 | Time: 0s"
+msgstr "Drag: 0 | Tid: 0s"
+
+#: src/main.py:125 src/main.py:209
+msgid "New Game"
+msgstr "Nytt spel"
+
+#: src/main.py:198
+#, python-format
+msgid "Moves: %d | Time: %ds"
+msgstr "Drag: %d | Tid: %ds"
+
+#: src/main.py:207
+msgid "Congratulations!"
+msgstr "Grattis!"
+
+#: src/main.py:208
+#, python-format
 msgid "You matched all pairs in %d moves and %d seconds!"
 msgstr "Du matchade alla par på %d drag och %d sekunder!"
