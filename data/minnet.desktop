@@ -1,8 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=Memory Training
+Name[sv]=Minnet
 GenericName=Train your working memory with card matching
 Comment=Train your working memory with card matching
+Comment[sv]=Minnesträning med kort
 Exec=minnet
 Icon=minnet
 Terminal=false
