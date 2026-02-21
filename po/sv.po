@@ -1,0 +1,77 @@
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2026
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: minnet 0.1.0\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
+"Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305146/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/minnet/main.py:1
+msgid "About Memory Training"
+msgstr "Om Minnet"
+
+#: src/minnet/main.py:2
+msgid "Congratulations!"
+msgstr "Grattis!"
+
+#: src/minnet/main.py:3
+msgid "Date"
+msgstr "Datum"
+
+#: src/minnet/main.py:4
+msgid "Details"
+msgstr "Detaljer"
+
+#: src/minnet/main.py:5
+msgid "Easy"
+msgstr "Lätt"
+
+#: src/minnet/main.py:6
+msgid "Export Results"
+msgstr "Exportera resultat"
+
+#: src/minnet/main.py:7
+msgid "Hard"
+msgstr "Svårt"
+
+#: src/minnet/main.py:8
+msgid "Medium"
+msgstr "Medel"
+
+#: src/minnet/main.py:9
+msgid "Memory Training"
+msgstr "Minnet"
+
+#: src/minnet/main.py:10
+msgid "Moves: %d | Time: %ds"
+msgstr "Drag: %d | Tid: %ds"
+
+#: src/minnet/main.py:11
+msgid "Moves: 0 | Time: 0s"
+msgstr "Drag: 0 | Tid: 0s"
+
+#: src/minnet/main.py:12
+msgid "New Game"
+msgstr "Nytt spel"
+
+#: src/minnet/main.py:13
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/minnet/main.py:14
+msgid "Result"
+msgstr "Resultat"
+
+#: src/minnet/main.py:15
+msgid "Toggle dark/light theme"
+msgstr "Växla mörkt/ljust tema"
+
+#: src/minnet/main.py:16
+msgid "You matched all pairs in %d moves and %d seconds!"
+msgstr "Du matchade alla par på %d drag och %d sekunder!"
