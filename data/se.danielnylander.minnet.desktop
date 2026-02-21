@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Memory Training
+Name[sv]=Minnet
+GenericName=Memory Training
+GenericName[sv]=Minnet
+Comment=Working memory training games for autism and ADHD
+Comment[sv]=Arbetsminnesträning med visuella minneslekar
+Exec=minnet
+Icon=se.danielnylander.minnet
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;Accessibility;
+Keywords=memory;training;cards;autism;adhd;
+Keywords[sv]=minne;träning;kort;autism;adhd;
