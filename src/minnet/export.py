@@ -42,7 +42,7 @@ def export_json(data, filepath):
 
 def export_pdf(data, filepath):
     """Export data to simple text-PDF with branding footer."""
-    lines = [f"{APP_LABEL} — {_(\"Export\")}", ""]
+    lines = [f"{APP_LABEL} — {_('Export')}", ""]
     for entry in data:
         lines.append(f"{entry.get(\'date\', \'\')} | {entry.get(\'details\', \'\')} | {entry.get(\'result\', \'\')}")
     lines.extend(["", _footer()])
