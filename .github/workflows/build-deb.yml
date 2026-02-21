@@ -27,7 +27,7 @@ jobs:
           DIR="build/${PKG}_${VER}_all"
           mkdir -p "$DIR/DEBIAN"
           mkdir -p "$DIR/usr/lib/python3/dist-packages/minnet"
-          mkdir -p "$DIR/usr/local/bin"
+          mkdir -p "$DIR/usr/bin"
           mkdir -p "$DIR/usr/share/applications"
           cp src/minnet/*.py "$DIR/usr/lib/python3/dist-packages/minnet/"
           # Compile translations
@@ -38,12 +38,12 @@ jobs:
             msgfmt "$po" -o "$DIR/usr/share/locale/$lang/LC_MESSAGES/minnet.mo"
           done
           # Launcher
-          cat > "$DIR/usr/local/bin/minnet" << 'LAUNCHER'
+          cat > "$DIR/usr/bin/minnet" << 'LAUNCHER'
 #!/usr/bin/env python3
 from minnet.main import main
 main()
 LAUNCHER
-          chmod 755 "$DIR/usr/local/bin/minnet"
+          chmod 755 "$DIR/usr/bin/minnet"
           # Desktop file
           [ -f "data/minnet.desktop" ] && cp "data/minnet.desktop" "$DIR/usr/share/applications/"
           cat > "$DIR/DEBIAN/control" << CTRL
