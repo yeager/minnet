@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 20:53+0100\n"
+"POT-Creation-Date: 2026-02-22 06:01+0100\n"
 "PO-Revision-Date: 2026-02-21 15:33+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305146/sv/)\n"
@@ -21,72 +21,94 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/export.py:11 src/main.py:62 src/main.py:75
+#: src/minnet/export.py:11 src/minnet/main.py:86 src/minnet/main.py:99
 msgid "Memory Training"
 msgstr "Minnet"
 
-#: src/export.py:23
+#: src/minnet/export.py:23
 msgid "Date"
 msgstr "Datum"
 
-#: src/export.py:23
+#: src/minnet/export.py:23
 msgid "Details"
 msgstr "Detaljer"
 
-#: src/export.py:23
+#: src/minnet/export.py:23
 msgid "Result"
 msgstr "Resultat"
 
-#: src/export.py:45
+#: src/minnet/export.py:45
 msgid "Export"
 msgstr ""
 
-#: src/main.py:93
+#: src/minnet/main.py:117
 msgid "Export Results"
 msgstr "Exportera resultat"
 
-#: src/main.py:94
+#: src/minnet/main.py:118
 msgid "About Memory Training"
 msgstr "Om Minnet"
 
-#: src/main.py:95
+#: src/minnet/main.py:119
 msgid "Quit"
 msgstr "Avsluta"
 
-#: src/main.py:99
+#: src/minnet/main.py:123
 msgid "Toggle dark/light theme"
 msgstr "Växla mörkt/ljust tema"
 
-#: src/main.py:105
+#: src/minnet/main.py:129
 msgid "Easy"
 msgstr "Lätt"
 
-#: src/main.py:105
+#: src/minnet/main.py:129
 msgid "Medium"
 msgstr "Medel"
 
-#: src/main.py:105
+#: src/minnet/main.py:129
 msgid "Hard"
 msgstr "Svårt"
 
-#: src/main.py:112
+#: src/minnet/main.py:136
 msgid "Moves: 0 | Time: 0s"
 msgstr "Drag: 0 | Tid: 0s"
 
-#: src/main.py:125 src/main.py:209
+#: src/minnet/main.py:149 src/minnet/main.py:233
 msgid "New Game"
 msgstr "Nytt spel"
 
-#: src/main.py:198
+#: src/minnet/main.py:222
 #, python-format
 msgid "Moves: %d | Time: %ds"
 msgstr "Drag: %d | Tid: %ds"
 
-#: src/main.py:207
+#: src/minnet/main.py:231
 msgid "Congratulations!"
 msgstr "Grattis!"
 
-#: src/main.py:208
+#: src/minnet/main.py:232
 #, python-format
 msgid "You matched all pairs in %d moves and %d seconds!"
 msgstr "Du matchade alla par på %d drag och %d sekunder!"
+
+#: src/minnet/main.py:268
+msgid "Welcome"
+msgstr ""
+
+#: src/minnet/main.py:274
+msgid "Welcome to Memory Training"
+msgstr ""
+
+#: src/minnet/main.py:276
+msgid ""
+"Train your memory with card-matching games.\n"
+"\n"
+"✓ Classic memory card game\n"
+"✓ Multiple difficulty levels\n"
+"✓ Track your progress\n"
+"✓ Fun for the whole family"
+msgstr ""
+
+#: src/minnet/main.py:279
+msgid "Get Started"
+msgstr ""
