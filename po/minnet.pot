@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the minnet package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: minnet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 06:01+0100\n"
+"POT-Creation-Date: 2026-02-22 17:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,101 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/minnet/export.py:11 src/minnet/main.py:86 src/minnet/main.py:99
+#: minnet/export.py:13 minnet/main.py:55 minnet/main.py:257
+#: src/minnet/export.py:11 src/minnet/main.py:87 src/minnet/main.py:100
 msgid "Memory Training"
+msgstr ""
+
+#: minnet/export.py:95 src/minnet/export.py:45
+msgid "Export"
+msgstr ""
+
+#: minnet/export.py:95
+msgid "Choose export format:"
+msgstr ""
+
+#: minnet/export.py:96
+msgid "Cancel"
+msgstr ""
+
+#: minnet/export.py:97
+msgid "CSV"
+msgstr ""
+
+#: minnet/export.py:98
+msgid "JSON"
+msgstr ""
+
+#: minnet/export.py:99
+msgid "PDF"
+msgstr ""
+
+#: minnet/export.py:111
+msgid "Save Export"
+msgstr ""
+
+#: minnet/export.py:132
+#, python-format
+msgid "Exported %s"
+msgstr ""
+
+#: minnet/export.py:135
+#, python-format
+msgid "Export error: %s"
+msgstr ""
+
+#: minnet/main.py:75
+msgid "Export (Ctrl+E)"
+msgstr ""
+
+#: minnet/main.py:80 src/minnet/main.py:118
+msgid "Export Results"
+msgstr ""
+
+#: minnet/main.py:81 src/minnet/main.py:119
+msgid "About Memory Training"
+msgstr ""
+
+#: minnet/main.py:82 src/minnet/main.py:120
+msgid "Quit"
+msgstr ""
+
+#: minnet/main.py:99 src/minnet/main.py:130
+msgid "Easy"
+msgstr ""
+
+#: minnet/main.py:99 src/minnet/main.py:130
+msgid "Medium"
+msgstr ""
+
+#: minnet/main.py:99 src/minnet/main.py:130
+msgid "Hard"
+msgstr ""
+
+#: minnet/main.py:125 minnet/main.py:176
+msgid "Moves: 0"
+msgstr ""
+
+#: minnet/main.py:131 src/minnet/main.py:150 src/minnet/main.py:234
+msgid "New Game"
+msgstr ""
+
+#: minnet/main.py:162
+msgid "Memory Training Results"
+msgstr ""
+
+#: minnet/main.py:210
+#, python-format
+msgid "Moves: %d"
+msgstr ""
+
+#: minnet/main.py:226
+#, python-format
+msgid "🎉 You found all pairs in %d moves!"
+msgstr ""
+
+#: minnet/main.py:264
+msgid "Working memory training games for autism and ADHD"
 msgstr ""
 
 #: src/minnet/export.py:23
@@ -33,69 +126,37 @@ msgstr ""
 msgid "Result"
 msgstr ""
 
-#: src/minnet/export.py:45
-msgid "Export"
-msgstr ""
-
-#: src/minnet/main.py:117
-msgid "Export Results"
-msgstr ""
-
-#: src/minnet/main.py:118
-msgid "About Memory Training"
-msgstr ""
-
-#: src/minnet/main.py:119
-msgid "Quit"
-msgstr ""
-
-#: src/minnet/main.py:123
+#: src/minnet/main.py:124
 msgid "Toggle dark/light theme"
 msgstr ""
 
-#: src/minnet/main.py:129
-msgid "Easy"
-msgstr ""
-
-#: src/minnet/main.py:129
-msgid "Medium"
-msgstr ""
-
-#: src/minnet/main.py:129
-msgid "Hard"
-msgstr ""
-
-#: src/minnet/main.py:136
+#: src/minnet/main.py:137
 msgid "Moves: 0 | Time: 0s"
 msgstr ""
 
-#: src/minnet/main.py:149 src/minnet/main.py:233
-msgid "New Game"
-msgstr ""
-
-#: src/minnet/main.py:222
+#: src/minnet/main.py:223
 #, python-format
 msgid "Moves: %d | Time: %ds"
 msgstr ""
 
-#: src/minnet/main.py:231
+#: src/minnet/main.py:232
 msgid "Congratulations!"
 msgstr ""
 
-#: src/minnet/main.py:232
+#: src/minnet/main.py:233
 #, python-format
 msgid "You matched all pairs in %d moves and %d seconds!"
 msgstr ""
 
-#: src/minnet/main.py:268
+#: src/minnet/main.py:269
 msgid "Welcome"
 msgstr ""
 
-#: src/minnet/main.py:274
+#: src/minnet/main.py:275
 msgid "Welcome to Memory Training"
 msgstr ""
 
-#: src/minnet/main.py:276
+#: src/minnet/main.py:277
 msgid ""
 "Train your memory with card-matching games.\n"
 "\n"
@@ -105,6 +166,6 @@ msgid ""
 "✓ Fun for the whole family"
 msgstr ""
 
-#: src/minnet/main.py:279
+#: src/minnet/main.py:280
 msgid "Get Started"
 msgstr ""
