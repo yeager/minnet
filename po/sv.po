@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: minnet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 17:03+0100\n"
+"POT-Creation-Date: 2026-02-22 17:04+0100\n"
 "PO-Revision-Date: 2026-02-21 15:33+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305146/sv/)\n"
@@ -32,41 +32,41 @@ msgstr "Exportera"
 
 #: minnet/export.py:95
 msgid "Choose export format:"
-msgstr ""
+msgstr "Välj exportformat:"
 
 #: minnet/export.py:96
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: minnet/export.py:97
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 #: minnet/export.py:98
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 #: minnet/export.py:99
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #: minnet/export.py:111
 msgid "Save Export"
-msgstr ""
+msgstr "Spara export"
 
 #: minnet/export.py:132
 #, python-format
 msgid "Exported %s"
-msgstr ""
+msgstr "Exporterade %s"
 
 #: minnet/export.py:135
 #, python-format
 msgid "Export error: %s"
-msgstr ""
+msgstr "Exportfel: %s"
 
 #: minnet/main.py:75
 msgid "Export (Ctrl+E)"
-msgstr ""
+msgstr "Exportera (Ctrl+E)"
 
 #: minnet/main.py:80 src/minnet/main.py:118
 msgid "Export Results"
@@ -94,7 +94,7 @@ msgstr "Svårt"
 
 #: minnet/main.py:125 minnet/main.py:176
 msgid "Moves: 0"
-msgstr ""
+msgstr "Drag: 0"
 
 #: minnet/main.py:131 src/minnet/main.py:150 src/minnet/main.py:234
 msgid "New Game"
@@ -102,21 +102,21 @@ msgstr "Nytt spel"
 
 #: minnet/main.py:162
 msgid "Memory Training Results"
-msgstr ""
+msgstr "Resultat för minnesträning"
 
 #: minnet/main.py:210
 #, python-format
 msgid "Moves: %d"
-msgstr ""
+msgstr "Drag: %d"
 
 #: minnet/main.py:226
 #, python-format
 msgid "🎉 You found all pairs in %d moves!"
-msgstr ""
+msgstr "🎉 Du hittade alla par med %d drag!"
 
 #: minnet/main.py:264
 msgid "Working memory training games for autism and ADHD"
-msgstr ""
+msgstr "Träningsspel för arbetsminnet för autism och ADHD"
 
 #: src/minnet/export.py:23
 msgid "Date"
