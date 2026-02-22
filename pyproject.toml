@@ -4,7 +4,7 @@ build-backend = "setuptools.backends._legacy:_Backend"
 
 [project]
 name = "minnet"
-version = "0.1.6"
+version = "0.1.7"
 description = "Working memory training games for autism and ADHD"
 license = "GPL-3.0-or-later"
 

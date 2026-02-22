@@ -324,3 +324,58 @@ def _restore_session(window, app_name):
             window.maximize()
     except (FileNotFoundError, _json.JSONDecodeError, OSError):
         pass
+
+
+# --- Fullscreen toggle (F11) ---
+def _setup_fullscreen(window, app):
+    """Add F11 fullscreen toggle."""
+    from gi.repository import Gio
+    if not app.lookup_action('toggle-fullscreen'):
+        action = Gio.SimpleAction.new('toggle-fullscreen', None)
+        action.connect('activate', lambda a, p: (
+            window.unfullscreen() if window.is_fullscreen() else window.fullscreen()
+        ))
+        app.add_action(action)
+        app.set_accels_for_action('app.toggle-fullscreen', ['F11'])
+
+
+# --- Plugin system ---
+import importlib.util
+import os as _pos
+
+def _load_plugins(app_name):
+    """Load plugins from ~/.config/<app>/plugins/."""
+    plugin_dir = _pos.path.join(_pos.path.expanduser('~'), '.config', app_name, 'plugins')
+    plugins = []
+    if not _pos.path.isdir(plugin_dir):
+        return plugins
+    for fname in sorted(_pos.listdir(plugin_dir)):
+        if fname.endswith('.py') and not fname.startswith('_'):
+            path = _pos.path.join(plugin_dir, fname)
+            try:
+                spec = importlib.util.spec_from_file_location(fname[:-3], path)
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                plugins.append(mod)
+            except Exception as e:
+                print(f"Plugin {fname}: {e}")
+    return plugins
+
+
+# --- Sound notifications ---
+def _play_sound(sound_name='complete'):
+    """Play a system notification sound."""
+    try:
+        import subprocess
+        # Try canberra-gtk-play first, then paplay
+        for cmd in [
+            ['canberra-gtk-play', '-i', sound_name],
+            ['paplay', f'/usr/share/sounds/freedesktop/stereo/{sound_name}.oga'],
+        ]:
+            try:
+                subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                return
+            except FileNotFoundError:
+                continue
+    except Exception:
+        pass
