@@ -23,3 +23,10 @@ GPL-3.0
 ## Author
 
 Daniel Nylander — [danielnylander.se](https://danielnylander.se)
+
+## Screenshots
+
+![minnet (English)](screenshots/minnet_en.png)
+
+![minnet (Svenska)](screenshots/minnet_sv.png)
+
