@@ -241,7 +241,7 @@ class App(Adw.Application):
         super().__init__(application_id=APP_ID)
         self.connect("activate", self._on_activate)
 
-    def _on_activate(self, *_):
+    def _on_activate(self, *_args):
         win = self.props.active_window or MainWindow(self)
         a = Gio.SimpleAction(name="about")
         a.connect("activate", self._on_about)
@@ -252,7 +252,7 @@ class App(Adw.Application):
         self.set_accels_for_action("app.quit", ["<Control>q"])
         win.present()
 
-    def _on_about(self, *_):
+    def _on_about(self, *_args):
         dialog = Adw.AboutDialog(
             application_name=_("Memory Training"),
             application_icon=APP_ID,
