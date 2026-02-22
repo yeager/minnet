@@ -39,7 +39,7 @@ msgstr "Resultat"
 
 #: src/minnet/export.py:45
 msgid "Export"
-msgstr ""
+msgstr "Exportera"
 
 #: src/minnet/main.py:117
 msgid "Export Results"
@@ -93,11 +93,11 @@ msgstr "Du matchade alla par på %d drag och %d sekunder!"
 
 #: src/minnet/main.py:268
 msgid "Welcome"
-msgstr ""
+msgstr "Välkommen"
 
 #: src/minnet/main.py:274
 msgid "Welcome to Memory Training"
-msgstr ""
+msgstr "Välkommen till Minnet"
 
 #: src/minnet/main.py:276
 msgid ""
@@ -108,7 +108,13 @@ msgid ""
 "✓ Track your progress\n"
 "✓ Fun for the whole family"
 msgstr ""
+"Träna ditt minne med kortmatchningsspel.\n"
+"\n"
+"✓ Klassiskt minneskortspel\n"
+"✓ Flera svårighetsgrader\n"
+"✓ Spåra dina framsteg\n"
+"✓ Roligt för hela familjen"
 
 #: src/minnet/main.py:279
 msgid "Get Started"
-msgstr ""
+msgstr "Kom igång"
