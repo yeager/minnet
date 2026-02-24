@@ -9,6 +9,6 @@ Exec=minnet
 Icon=se.danielnylander.minnet
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;Utility;Accessibility;
+Categories=GNOME;GTK;Utility;Accessibility;Autismappar
 Keywords=memory;training;cards;autism;adhd;
 Keywords[sv]=minne;träning;kort;autism;adhd;
