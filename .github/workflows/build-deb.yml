@@ -39,6 +39,8 @@ jobs:
           printf '#!/usr/bin/env python3\nfrom minnet.main import main\nmain()\n' > "$DIR/usr/bin/minnet"
           chmod 755 "$DIR/usr/bin/minnet"
           [ -f "data/minnet.desktop" ] && cp "data/minnet.desktop" "$DIR/usr/share/applications/"
+          mkdir -p ${{github.workspace}}/deb-build/usr/share/icons/hicolor/scalable/apps/
+          cp ./data/icons/se.danielnylander.minnet.svg ${{github.workspace}}/deb-build/usr/share/icons/hicolor/scalable/apps/
           printf 'Package: minnet\nVersion: %s\nSection: utils\nPriority: optional\nArchitecture: all\nDepends: python3, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1\nMaintainer: Daniel Nylander <daniel@danielnylander.se>\nDescription: Memory training game\n' "$VER" > "$DIR/DEBIAN/control"
           dpkg-deb --build "$DIR"
       - name: Upload
