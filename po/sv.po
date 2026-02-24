@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: minnet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 17:04+0100\n"
+"POT-Creation-Date: 2026-02-23 11:03+0100\n"
 "PO-Revision-Date: 2026-02-21 15:33+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305146/sv/)\n"
@@ -21,102 +21,9 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: minnet/export.py:13 minnet/main.py:55 minnet/main.py:257
-#: src/minnet/export.py:11 src/minnet/main.py:87 src/minnet/main.py:100
+#: src/minnet/export.py:11 src/minnet/main.py:87 src/minnet/main.py:106
 msgid "Memory Training"
 msgstr "Minnet"
-
-#: minnet/export.py:95 src/minnet/export.py:45
-msgid "Export"
-msgstr "Exportera"
-
-#: minnet/export.py:95
-msgid "Choose export format:"
-msgstr "Välj exportformat:"
-
-#: minnet/export.py:96
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: minnet/export.py:97
-msgid "CSV"
-msgstr "CSV"
-
-#: minnet/export.py:98
-msgid "JSON"
-msgstr "JSON"
-
-#: minnet/export.py:99
-msgid "PDF"
-msgstr "PDF"
-
-#: minnet/export.py:111
-msgid "Save Export"
-msgstr "Spara export"
-
-#: minnet/export.py:132
-#, python-format
-msgid "Exported %s"
-msgstr "Exporterade %s"
-
-#: minnet/export.py:135
-#, python-format
-msgid "Export error: %s"
-msgstr "Exportfel: %s"
-
-#: minnet/main.py:75
-msgid "Export (Ctrl+E)"
-msgstr "Exportera (Ctrl+E)"
-
-#: minnet/main.py:80 src/minnet/main.py:118
-msgid "Export Results"
-msgstr "Exportera resultat"
-
-#: minnet/main.py:81 src/minnet/main.py:119
-msgid "About Memory Training"
-msgstr "Om Minnet"
-
-#: minnet/main.py:82 src/minnet/main.py:120
-msgid "Quit"
-msgstr "Avsluta"
-
-#: minnet/main.py:99 src/minnet/main.py:130
-msgid "Easy"
-msgstr "Lätt"
-
-#: minnet/main.py:99 src/minnet/main.py:130
-msgid "Medium"
-msgstr "Medel"
-
-#: minnet/main.py:99 src/minnet/main.py:130
-msgid "Hard"
-msgstr "Svårt"
-
-#: minnet/main.py:125 minnet/main.py:176
-msgid "Moves: 0"
-msgstr "Drag: 0"
-
-#: minnet/main.py:131 src/minnet/main.py:150 src/minnet/main.py:234
-msgid "New Game"
-msgstr "Nytt spel"
-
-#: minnet/main.py:162
-msgid "Memory Training Results"
-msgstr "Resultat för minnesträning"
-
-#: minnet/main.py:210
-#, python-format
-msgid "Moves: %d"
-msgstr "Drag: %d"
-
-#: minnet/main.py:226
-#, python-format
-msgid "🎉 You found all pairs in %d moves!"
-msgstr "🎉 Du hittade alla par med %d drag!"
-
-#: minnet/main.py:264
-msgid "Working memory training games for autism and ADHD"
-msgstr "Träningsspel för arbetsminnet för autism och ADHD"
 
 #: src/minnet/export.py:23
 msgid "Date"
@@ -130,37 +37,73 @@ msgstr "Detaljer"
 msgid "Result"
 msgstr "Resultat"
 
+#: src/minnet/export.py:45
+msgid "Export"
+msgstr "Exportera"
+
+#: src/minnet/main.py:91
+msgid "Thanks to"
+msgstr "Tack till"
+
 #: src/minnet/main.py:124
+msgid "Export Results"
+msgstr "Exportera resultat"
+
+#: src/minnet/main.py:125
+msgid "About Memory Training"
+msgstr "Om Minnet"
+
+#: src/minnet/main.py:126
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/minnet/main.py:130
 msgid "Toggle dark/light theme"
 msgstr "Växla mörkt/ljust tema"
 
-#: src/minnet/main.py:137
+#: src/minnet/main.py:136
+msgid "Easy"
+msgstr "Lätt"
+
+#: src/minnet/main.py:136
+msgid "Medium"
+msgstr "Medel"
+
+#: src/minnet/main.py:136
+msgid "Hard"
+msgstr "Svårt"
+
+#: src/minnet/main.py:143
 msgid "Moves: 0 | Time: 0s"
 msgstr "Drag: 0 | Tid: 0s"
 
-#: src/minnet/main.py:223
+#: src/minnet/main.py:156 src/minnet/main.py:240
+msgid "New Game"
+msgstr "Nytt spel"
+
+#: src/minnet/main.py:229
 #, python-format
 msgid "Moves: %d | Time: %ds"
 msgstr "Drag: %d | Tid: %ds"
 
-#: src/minnet/main.py:232
+#: src/minnet/main.py:238
 msgid "Congratulations!"
 msgstr "Grattis!"
 
-#: src/minnet/main.py:233
+#: src/minnet/main.py:239
 #, python-format
 msgid "You matched all pairs in %d moves and %d seconds!"
 msgstr "Du matchade alla par på %d drag och %d sekunder!"
 
-#: src/minnet/main.py:269
+#: src/minnet/main.py:275
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: src/minnet/main.py:275
+#: src/minnet/main.py:281
 msgid "Welcome to Memory Training"
 msgstr "Välkommen till Minnet"
 
-#: src/minnet/main.py:277
+#: src/minnet/main.py:283
 msgid ""
 "Train your memory with card-matching games.\n"
 "\n"
@@ -176,6 +119,6 @@ msgstr ""
 "✓ Spåra dina framsteg\n"
 "✓ Roligt för hela familjen"
 
-#: src/minnet/main.py:280
+#: src/minnet/main.py:286
 msgid "Get Started"
 msgstr "Kom igång"
