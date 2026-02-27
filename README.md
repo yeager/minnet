@@ -1,3 +1,5 @@
+> **⚠️ This app has been migrated to the Autismappar PWA at https://autismappar.se**
+
 # Minnet
 
 Working memory training games for autism and ADHD.
@@ -29,4 +31,3 @@ Daniel Nylander — [danielnylander.se](https://danielnylander.se)
 ![minnet (English)](screenshots/minnet_en.png)
 
 ![minnet (Svenska)](screenshots/minnet_sv.png)
-
